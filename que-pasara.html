@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qué Pasará Mañana — Gonzalo Candia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#171717;--black2:#1E1E1E;--orange:#F25623;--gray-dark:#4D4D4D;--gray-mid:#888888;--gray-light:#DEDEDE;--white:#F5F2ED;--rule:#2A2A2A;}
+  *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+  body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;}
+  .orange-bar{height:3px;background:var(--orange);}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:0.5px solid var(--rule);}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--white);text-decoration:none;}
+  .nav-back{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-dark);text-decoration:none;transition:color 0.2s;}
+  .nav-back:hover{color:var(--orange);}
+  .project-hero{height:70vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:48px;}
+  .project-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(23,23,23,0.2) 0%,rgba(23,23,23,0.9) 80%,var(--black) 100%),url('img/que-pasara.jpg') center/cover no-repeat;background-color:#2A2A2A;}
+  .project-hero-content{position:relative;z-index:2;}
+  .project-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+  .project-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,96px);letter-spacing:4px;line-height:0.95;}
+  .project-year{font-size:11px;letter-spacing:2px;color:var(--gray-mid);margin-top:12px;}
+  .project-body{display:grid;grid-template-columns:1fr 320px;gap:0;}
+  .project-main{padding:56px 48px;border-right:0.5px solid var(--rule);}
+  .block-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+  .block-label::after{content:'';flex:1;height:0.5px;background:var(--rule);}
+  .sinopsis{font-size:15px;color:var(--gray-light);line-height:1.9;margin-bottom:56px;max-width:600px;}
+  .sinopsis strong{color:var(--white);font-weight:400;}
+  .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:56px;background:var(--black2);}
+  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+  .frames-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:56px;}
+  .frame{aspect-ratio:16/9;background:var(--black2);overflow:hidden;}
+  .frame-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rule);}
+  .project-sidebar{padding:56px 32px;}
+  .sidebar-block{margin-bottom:40px;}
+  .ficha-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:0.5px solid var(--rule);font-size:12px;}
+  .ficha-key{color:var(--gray-dark);font-size:10px;letter-spacing:1px;}
+  .ficha-val{color:var(--white);text-align:right;}
+  .crew-list{list-style:none;}
+  .crew-item{padding:12px 0;border-bottom:0.5px solid var(--rule);}
+  .crew-role{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:3px;}
+  .crew-name{font-size:13px;color:var(--white);}
+  .project-nav{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-top:0.5px solid var(--rule);}
+  .project-nav-item{padding:32px 48px;text-decoration:none;background:var(--black2);transition:background 0.2s;display:flex;flex-direction:column;gap:6px;}
+  .project-nav-item:hover{background:#222;}
+  .nav-direction{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-dark);}
+  .nav-project-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--white);}
+  footer{padding:20px 48px;display:flex;justify-content:space-between;border-top:0.5px solid var(--rule);}
+  .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--rule);}
+  .footer-copy{font-size:10px;color:var(--rule);}
+  @media(max-width:768px){nav{padding:16px 24px;}.project-hero{padding:32px 24px;height:50vh;}.project-body{grid-template-columns:1fr;}.project-main{padding:40px 24px;border-right:none;border-bottom:0.5px solid var(--rule);}.project-sidebar{padding:40px 24px;}.frames-grid{grid-template-columns:repeat(2,1fr);}.project-nav{grid-template-columns:1fr;}.project-nav-item{padding:24px;}footer{padding:16px 24px;}}
+</style>
+</head>
+<body>
+<div class="orange-bar"></div>
+<nav>
+  <a href="index.html" class="nav-logo">GC</a>
+  <a href="index.html#direccion" class="nav-back">← Volver</a>
+</nav>
+
+<div class="project-hero">
+  <div class="project-hero-bg"></div>
+  <div class="project-hero-content">
+    <div class="project-cat">Cortometraje de Ficción · Comedia · 2024</div>
+    <h1 class="project-title">QUÉ PASARÁ<br>MAÑANA</h1>
+    <p class="project-year">Dirección · Guion</p>
+  </div>
+</div>
+
+<div class="project-body">
+  <div class="project-main">
+    <div class="block-label">Sinopsis</div>
+    <p class="sinopsis">
+      Un grupo de estudiantes de cine amanece con un problema: falta <strong>Víctor</strong>, el único que sabe dónde está el corte final de su proyecto, y la exposición es en pocas horas. Lo que empieza como una búsqueda desesperada se convierte en una serie de situaciones absurdas — laptops ajenas, tratos con el matón del campus y contraseñas imposibles de adivinar — mientras el reloj corre y Rafael los llama sin parar desde el salón. Una historia sobre la amistad, el caos universitario y la pregunta que todo estudiante de comunicaciones se ha hecho alguna vez: <strong>¿por qué siempre pasa esto justo antes de la expo?</strong>
+    </p>
+
+    <div class="block-label">Ver película</div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/BHWHiB9wqdU" title="Qué Pasará Mañana" allowfullscreen></iframe>
+    </div>
+
+    <div class="block-label">Frames</div>
+    <div class="frames-grid">
+      <div class="frame"><div class="frame-placeholder">Frame 01</div></div>
+      <div class="frame"><div class="frame-placeholder">Frame 02</div></div>
+      <div class="frame"><div class="frame-placeholder">Frame 03</div></div>
+      <div class="frame"><div class="frame-placeholder">Frame 04</div></div>
+      <div class="frame"><div class="frame-placeholder">Frame 05</div></div>
+      <div class="frame"><div class="frame-placeholder">Frame 06</div></div>
+    </div>
+  </div>
+
+  <div class="project-sidebar">
+    <div class="sidebar-block">
+      <div class="block-label">Ficha técnica</div>
+      <div class="ficha-row"><span class="ficha-key">Año</span><span class="ficha-val">2024</span></div>
+      <div class="ficha-row"><span class="ficha-key">Género</span><span class="ficha-val">Comedia</span></div>
+      <div class="ficha-row"><span class="ficha-key">Duración</span><span class="ficha-val">— min</span></div>
+      <div class="ficha-row"><span class="ficha-key">País</span><span class="ficha-val">Perú</span></div>
+      <div class="ficha-row"><span class="ficha-key">Productora</span><span class="ficha-val">PUCP</span></div>
+    </div>
+    <div class="sidebar-block">
+      <div class="block-label">Crew</div>
+      <ul class="crew-list">
+        <li class="crew-item"><div class="crew-role">Dirección · Guion</div><div class="crew-name">Gonzalo Candia</div></li>
+        <li class="crew-item"><div class="crew-role">Producción</div><div class="crew-name">—</div></li>
+        <li class="crew-item"><div class="crew-role">Fotografía</div><div class="crew-name">—</div></li>
+        <li class="crew-item"><div class="crew-role">Montaje</div><div class="crew-name">Gonzalo Candia</div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="project-nav">
+  <a href="como-ultimo-acto.html" class="project-nav-item">
+    <span class="nav-direction">← Anterior</span>
+    <span class="nav-project-title">Como Último Acto</span>
+  </a>
+  <a href="pasan-las-horas.html" class="project-nav-item" style="text-align:right;">
+    <span class="nav-direction">Siguiente →</span>
+    <span class="nav-project-title">Pasan las Horas</span>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-logo">GONZALO CANDIA · 2025</div>
+  <div class="footer-copy">Lima, Perú</div>
+</footer>
+<div class="orange-bar"></div>
+</body>
+</html>

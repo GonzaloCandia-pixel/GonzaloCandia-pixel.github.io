@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotografía — Gonzalo Candia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#171717;--black2:#1E1E1E;--orange:#F25623;--gray-dark:#4D4D4D;--gray-mid:#888888;--white:#F5F2ED;--rule:#2A2A2A;}
+  *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;}
+  .orange-bar{height:3px;background:var(--orange);}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:0.5px solid var(--rule);}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--white);text-decoration:none;}
+  .nav-back{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-dark);text-decoration:none;transition:color 0.2s;}
+  .nav-back:hover{color:var(--orange);}
+  .hero{padding:80px 48px 56px;border-bottom:0.5px solid var(--rule);}
+  .hero-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,96px);letter-spacing:4px;line-height:0.95;}
+
+  /* Filter tabs */
+  .filter-row{display:flex;gap:8px;padding:24px 48px;border-bottom:0.5px solid var(--rule);flex-wrap:wrap;}
+  .filter-btn{font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border:0.5px solid var(--rule);background:transparent;color:var(--gray-dark);cursor:pointer;transition:all 0.2s;border-radius:2px;}
+  .filter-btn.active,.filter-btn:hover{border-color:var(--orange);color:var(--orange);}
+
+  /* Masonry grid */
+  .gallery{padding:32px 48px;columns:3;gap:4px;}
+  .gallery-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;position:relative;background:var(--black2);}
+  .gallery-item img{width:100%;display:block;filter:grayscale(10%);transition:filter 0.3s,transform 0.4s;}
+  .gallery-item:hover img{filter:grayscale(0%);transform:scale(1.03);}
+  .gallery-placeholder{width:100%;padding-bottom:75%;background:var(--black2);display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rule);position:relative;}
+  .gallery-placeholder span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+  .gallery-placeholder.tall{padding-bottom:133%;}
+  .gallery-placeholder.wide{padding-bottom:56%;}
+
+  /* Lightbox */
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(23,23,23,0.96);z-index:999;align-items:center;justify-content:center;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;}
+  .lightbox-close{position:absolute;top:24px;right:24px;font-size:24px;color:var(--white);cursor:pointer;background:none;border:none;}
+
+  .section-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);padding:32px 48px 16px;display:flex;align-items:center;gap:12px;}
+  .section-label::after{content:'';flex:1;height:0.5px;background:var(--rule);}
+
+  footer{padding:20px 48px;display:flex;justify-content:space-between;border-top:0.5px solid var(--rule);margin-top:32px;}
+  .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--rule);}
+  .footer-copy{font-size:10px;color:var(--rule);}
+  @media(max-width:768px){nav{padding:16px 24px;}.hero{padding:48px 24px 40px;}.gallery{padding:24px;columns:2;}.filter-row{padding:16px 24px;}.section-label{padding:24px 24px 12px;}footer{padding:16px 24px;}}
+</style>
+</head>
+<body>
+<div class="orange-bar"></div>
+<nav><a href="index.html" class="nav-logo">GC</a><a href="index.html#foto" class="nav-back">← Volver</a></nav>
+
+<div class="hero">
+  <div class="hero-cat">Fotografía & Diseño</div>
+  <h1 class="hero-title">GALERÍA DE<br>FOTOGRAFÍA</h1>
+</div>
+
+<div class="filter-row">
+  <button class="filter-btn active">Todas</button>
+  <button class="filter-btn">Producto</button>
+  <button class="filter-btn">Eventos</button>
+  <button class="filter-btn">Arte</button>
+  <button class="filter-btn">Comida</button>
+</div>
+
+<!-- Sociedad de Arte -->
+<div class="section-label">Sociedad de Arte</div>
+<div class="gallery">
+  <div class="gallery-item"><div class="gallery-placeholder tall"><span>SA 01</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder"><span>SA 02</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder"><span>SA 03</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder wide"><span>SA 04</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder tall"><span>SA 05</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder"><span>SA 06</span></div></div>
+</div>
+
+<!-- Comida rápida -->
+<div class="section-label">Comida Rápida</div>
+<div class="gallery">
+  <div class="gallery-item"><div class="gallery-placeholder"><span>CF 01</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder tall"><span>CF 02</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder"><span>CF 03</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder wide"><span>CF 04</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder"><span>CF 05</span></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder tall"><span>CF 06</span></div></div>
+</div>
+
+<footer><div class="footer-logo">GONZALO CANDIA · 2025</div><div class="footer-copy">Lima, Perú</div></footer>
+<div class="orange-bar"></div>
+</body>
+</html>

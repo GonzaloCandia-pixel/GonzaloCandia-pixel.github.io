@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achori — Gonzalo Candia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#171717;--black2:#1E1E1E;--orange:#F25623;--gray-dark:#4D4D4D;--gray-mid:#888888;--gray-light:#DEDEDE;--white:#F5F2ED;--rule:#2A2A2A;}
+  *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;}
+  .orange-bar{height:3px;background:var(--orange);}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:0.5px solid var(--rule);}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--white);text-decoration:none;}
+  .nav-back{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-dark);text-decoration:none;transition:color 0.2s;}
+  .nav-back:hover{color:var(--orange);}
+  .hero{padding:80px 48px 56px;border-bottom:0.5px solid var(--rule);}
+  .hero-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,96px);letter-spacing:4px;line-height:0.95;margin-bottom:16px;}
+  .hero-role{font-size:11px;letter-spacing:2px;color:var(--gray-mid);}
+  .body-grid{display:grid;grid-template-columns:1fr 300px;border-bottom:0.5px solid var(--rule);}
+  .main-col{padding:56px 48px;border-right:0.5px solid var(--rule);}
+  .side-col{padding:56px 32px;}
+  .block-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+  .block-label::after{content:'';flex:1;height:0.5px;background:var(--rule);}
+  .desc-text{font-size:14px;color:var(--gray-light);line-height:1.9;margin-bottom:48px;max-width:580px;}
+  .desc-text strong{color:var(--white);font-weight:400;}
+
+  /* Video embed */
+  .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:16px;background:var(--black2);}
+  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+  .video-caption{font-size:10px;letter-spacing:1px;color:var(--gray-dark);margin-bottom:40px;}
+
+  /* Reels row */
+  .reels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:48px;}
+  .reel-item{aspect-ratio:9/16;background:var(--black2);overflow:hidden;position:relative;}
+  .reel-item iframe{width:100%;height:100%;border:none;}
+  .reel-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rule);}
+
+  /* Foto grid */
+  .foto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:48px;}
+  .foto-item{aspect-ratio:4/3;background:var(--black2);overflow:hidden;}
+  .foto-item img{width:100%;height:100%;object-fit:cover;filter:grayscale(10%);transition:filter 0.3s,transform 0.4s;}
+  .foto-item:hover img{filter:grayscale(0%);transform:scale(1.04);}
+  .foto-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rule);}
+
+  /* Sidebar */
+  .ficha-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid var(--rule);font-size:12px;}
+  .ficha-key{color:var(--gray-dark);font-size:10px;letter-spacing:1px;}
+  .ficha-val{color:var(--white);text-align:right;}
+
+  /* Nav */
+  .project-nav{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+  .project-nav-item{padding:32px 48px;text-decoration:none;background:var(--black2);transition:background 0.2s;display:flex;flex-direction:column;gap:6px;}
+  .project-nav-item:hover{background:#222;}
+  .nav-direction{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-dark);}
+  .nav-project-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--white);}
+  footer{padding:20px 48px;display:flex;justify-content:space-between;border-top:0.5px solid var(--rule);}
+  .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--rule);}
+  .footer-copy{font-size:10px;color:var(--rule);}
+  @media(max-width:768px){nav{padding:16px 24px;}.hero{padding:48px 24px 40px;}.body-grid{grid-template-columns:1fr;}.main-col{padding:40px 24px;border-right:none;border-bottom:0.5px solid var(--rule);}.side-col{padding:40px 24px;}.reels-grid{grid-template-columns:1fr 1fr;}.foto-grid{grid-template-columns:1fr 1fr;}.project-nav{grid-template-columns:1fr;}.project-nav-item{padding:24px;}footer{padding:16px 24px;}}
+</style>
+</head>
+<body>
+<div class="orange-bar"></div>
+<nav><a href="index.html" class="nav-logo">GC</a><a href="index.html#marcas" class="nav-back">← Volver</a></nav>
+
+<div class="hero">
+  <div class="hero-cat">Contenido para Marcas · Street Food · Fotografía de Producto</div>
+  <h1 class="hero-title">ACHORI</h1>
+  <p class="hero-role">Filmmaker · Fotógrafo Publicitario</p>
+</div>
+
+<div class="body-grid">
+  <div class="main-col">
+
+    <div class="block-label">Sobre el proyecto</div>
+    <p class="desc-text">Producción de <strong>videos institucionales para LinkedIn</strong> y contenido audiovisual para redes sociales. A cargo de la grabación y edición completa de cada pieza, desde la coordinación en set hasta la exportación final según especificaciones de cada plataforma.</p>
+
+    <div class="block-label">Videos</div>
+    <div class="video-wrap">
+      <!-- Reemplaza con el link real de PayJoy -->
+      <iframe src="https://www.youtube.com/embed/fzNoSmKXfJ0" title="PayJoy video" allowfullscreen></iframe>
+    </div>
+    <p class="video-caption">Video institucional — LinkedIn</p>
+
+    <div class="block-label">Reels</div>
+    <div class="reels-grid">
+      <div class="reel-item"><div class="reel-placeholder">Reel 01</div></div>
+      <div class="reel-item"><div class="reel-placeholder">Reel 02</div></div>
+      <div class="reel-item"><div class="reel-placeholder">Reel 03</div></div>
+    </div>
+
+    <div class="block-label">Fotografía</div>
+    <div class="foto-grid">
+      <div class="foto-item"><div class="foto-placeholder">Foto 01</div></div>
+      <div class="foto-item"><div class="foto-placeholder">Foto 02</div></div>
+      <div class="foto-item"><div class="foto-placeholder">Foto 03</div></div>
+      <div class="foto-item"><div class="foto-placeholder">Foto 04</div></div>
+      <div class="foto-item"><div class="foto-placeholder">Foto 05</div></div>
+      <div class="foto-item"><div class="foto-placeholder">Foto 06</div></div>
+    </div>
+
+  </div>
+  <div class="side-col">
+    <div class="block-label">Ficha</div>
+    <div class="ficha-row"><span class="ficha-key">Cliente</span><span class="ficha-val">PayJoy</span></div>
+    <div class="ficha-row"><span class="ficha-key">Año</span><span class="ficha-val">2025</span></div>
+    <div class="ficha-row"><span class="ficha-key">Servicios</span><span class="ficha-val">Grabación · Edición</span></div>
+    <div class="ficha-row"><span class="ficha-key">Plataformas</span><span class="ficha-val">LinkedIn · Instagram</span></div>
+    <div class="ficha-row"><span class="ficha-key">Formatos</span><span class="ficha-val">16:9 · 9:16 · 1:1</span></div>
+  </div>
+</div>
+
+<div class="project-nav">
+  <a href="index.html#marcas" class="project-nav-item">
+    <span class="nav-direction">← Volver a</span>
+    <span class="nav-project-title">Contenido para Marcas</span>
+  </a>
+  <a href="marca-neoauto.html" class="project-nav-item" style="text-align:right;">
+    <span class="nav-direction">Siguiente →</span>
+    <span class="nav-project-title">NeoAuto</span>
+  </a>
+</div>
+
+<footer><div class="footer-logo">GONZALO CANDIA · 2025</div><div class="footer-copy">Lima, Perú</div></footer>
+<div class="orange-bar"></div>
+</body>
+</html>

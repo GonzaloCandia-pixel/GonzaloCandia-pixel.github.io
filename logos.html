@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Logos — Gonzalo Candia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#171717;--black2:#1E1E1E;--orange:#F25623;--gray-dark:#4D4D4D;--gray-mid:#888888;--white:#F5F2ED;--rule:#2A2A2A;}
+  *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;}
+  .orange-bar{height:3px;background:var(--orange);}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:0.5px solid var(--rule);}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--white);text-decoration:none;}
+  .nav-back{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-dark);text-decoration:none;transition:color 0.2s;}
+  .nav-back:hover{color:var(--orange);}
+  .hero{padding:80px 48px 56px;border-bottom:0.5px solid var(--rule);}
+  .hero-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,96px);letter-spacing:4px;line-height:0.95;margin-bottom:16px;}
+  .hero-sub{font-size:13px;color:var(--gray-mid);}
+
+  .logos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;padding:0;}
+  .logo-card{background:var(--black2);padding:0;position:relative;overflow:hidden;}
+  .logo-video{position:relative;padding-bottom:56.25%;background:var(--black2);}
+  .logo-video video,.logo-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border:none;}
+  .logo-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rule);}
+  .logo-info{padding:20px 24px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid var(--rule);}
+  .logo-name{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--white);}
+  .logo-tool{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);}
+
+  footer{padding:20px 48px;display:flex;justify-content:space-between;border-top:0.5px solid var(--rule);}
+  .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--rule);}
+  .footer-copy{font-size:10px;color:var(--rule);}
+  @media(max-width:768px){nav{padding:16px 24px;}.hero{padding:48px 24px 40px;}.logos-grid{grid-template-columns:1fr;}footer{padding:16px 24px;}}
+</style>
+</head>
+<body>
+<div class="orange-bar"></div>
+<nav><a href="index.html" class="nav-logo">GC</a><a href="index.html#foto" class="nav-back">← Volver</a></nav>
+
+<div class="hero">
+  <div class="hero-cat">Motion Graphics · After Effects</div>
+  <h1 class="hero-title">ANIMACIÓN<br>DE LOGOS</h1>
+  <p class="hero-sub">Identidad visual en movimiento para marcas</p>
+</div>
+
+<div class="logos-grid">
+
+  <div class="logo-card">
+    <div class="logo-video">
+      <!-- Reemplaza src con tu video/gif real -->
+      <video autoplay loop muted playsinline src="img/logos/logo-01.mp4" onerror="this.style.display='none'"></video>
+      <div class="logo-placeholder">Logo 01 — subir video</div>
+    </div>
+    <div class="logo-info">
+      <span class="logo-name">Marca 01</span>
+      <span class="logo-tool">After Effects</span>
+    </div>
+  </div>
+
+  <div class="logo-card">
+    <div class="logo-video">
+      <video autoplay loop muted playsinline src="img/logos/logo-02.mp4" onerror="this.style.display='none'"></video>
+      <div class="logo-placeholder">Logo 02 — subir video</div>
+    </div>
+    <div class="logo-info">
+      <span class="logo-name">Marca 02</span>
+      <span class="logo-tool">After Effects</span>
+    </div>
+  </div>
+
+  <div class="logo-card">
+    <div class="logo-video">
+      <video autoplay loop muted playsinline src="img/logos/logo-03.mp4" onerror="this.style.display='none'"></video>
+      <div class="logo-placeholder">Logo 03 — subir video</div>
+    </div>
+    <div class="logo-info">
+      <span class="logo-name">Marca 03</span>
+      <span class="logo-tool">After Effects</span>
+    </div>
+  </div>
+
+  <div class="logo-card">
+    <div class="logo-video">
+      <video autoplay loop muted playsinline src="img/logos/logo-04.mp4" onerror="this.style.display='none'"></video>
+      <div class="logo-placeholder">Logo 04 — subir video</div>
+    </div>
+    <div class="logo-info">
+      <span class="logo-name">Marca 04</span>
+      <span class="logo-tool">After Effects</span>
+    </div>
+  </div>
+
+</div>
+
+<footer><div class="footer-logo">GONZALO CANDIA · 2025</div><div class="footer-copy">Lima, Perú</div></footer>
+<div class="orange-bar"></div>
+</body>
+</html>
